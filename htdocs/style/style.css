@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #5e3dc6;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Стили для формы */
+form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+/* Стили для кнопок */
+button {
+    background: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #5a4fcf;
+}
+
+/* Стили для ссылок */
+a {
+    color: #6c63ff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5a4fcf;
+}
+
+/* Стили для таблицы */
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #6c63ff;
+    color: white;
+    font-size: 1.1rem;
+}
+
+td {
+    font-size: 1rem;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f3f1ff;
+}
+
+/* Дополнительные стили для изображений и текста */
+img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    height: 120px;
+    width: 120px;
+}
+
+.msg {
+    border: 2px solid red;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Стили для текста */
+p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
