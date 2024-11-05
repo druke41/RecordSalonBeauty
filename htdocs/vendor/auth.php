@@ -8,5 +8,5 @@ $login = $_POST["login"];
 $password = md5($_POST["password"]);
 
 /** @var  $pdo */
-$user_auth = new User($pdo);
-$user_auth->login($login, $password);
+$userAuth = new User($pdo);
+$userAuth->login($login, $password);

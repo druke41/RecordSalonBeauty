@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'vendor/connect.php';
-require_once "class/Masters.php";
+require_once "class/Master.php";
 
 ?>
 
@@ -24,7 +24,7 @@ require_once "class/Masters.php";
     </tr>
     <?php
     /** @var $pdo */
-    $masters = new masters($pdo);
+    $masters = new Master($pdo);
     $masterRes = $masters->getMasters();
     foreach ($masterRes as $master) {
         ?>

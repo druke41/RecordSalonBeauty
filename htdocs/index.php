@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'class/Session.php';
-require_once 'class/Records.php';
+require_once 'class/Record.php';
 require_once 'vendor/connect.php';
 ?>
 <!doctype html>
@@ -15,6 +15,7 @@ require_once 'vendor/connect.php';
 <body>
 <?php
 $session = new session();
+
 if ($session->getUser() === null) {
     ?>
     <form action="vendor/auth.php" method="post">
@@ -49,7 +50,7 @@ if ($session->getUser() === null) {
         <?php
         $idUser = $_SESSION['user']['id'];
         /** @var $pdo */
-        $userRecords = new records($pdo);
+        $userRecords = new Record($pdo);
         $mainRecord = $userRecords->getUserById($idUser);
         foreach ($mainRecord as $record) {
             $masterInfo = $userRecords->getRecordsFromMaster($record['id_master']);

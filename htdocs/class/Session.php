@@ -9,7 +9,7 @@ class Session
         return isset($_SESSION[$this->user]) ? $_SESSION[$this->user] : null;
     }
 
-    public function getUserName(): String
+    public function getUserName(): string
     {
         return $_SESSION[$this->user]['full_name'];
     }

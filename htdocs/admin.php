@@ -2,7 +2,7 @@
 session_start();
 require_once "vendor/connect.php";
 require_once "class/Session.php";
-require_once "class/Masters.php";
+require_once "class/Master.php";
 $session = new Session();
 ?>
 <!doctype html>
@@ -22,7 +22,7 @@ $session = new Session();
     </tr>
     <?php
     /** @var $pdo */
-    $masters = new Masters($pdo);
+    $masters = new Master($pdo);
     $getMasters = $masters->getMasters();
     foreach ($getMasters as $master) {
         ?>

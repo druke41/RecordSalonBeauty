@@ -1,12 +1,12 @@
 <?php
 require_once "connect.php";
-require_once "../class/Masters.php";
+require_once "../class/Master.php";
 
 $masterName = $_POST['masterName'];
 $masterSpecialization = $_POST['masterSpecialization'];
 
 /** @var  $pdo */
-$master = new masters($pdo);
+$master = new master($pdo);
 $master->createMaster($masterName, $masterSpecialization);
 header("location: ../admin.php");
 exit();
