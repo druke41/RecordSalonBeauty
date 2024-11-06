@@ -13,7 +13,7 @@ $passwordConfirm = md5($_POST['passwordConfirm']);
 /** @var  $pdo */
 $userRegistration = new User($pdo);
 
-if ($password == $passwordConfirm) {
+if ($password === $passwordConfirm) {
     $userRegistration->registration($fullName, $login, $email, $password);
     header("location: ../index.php");
     exit();

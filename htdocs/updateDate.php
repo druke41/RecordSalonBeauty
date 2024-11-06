@@ -1,6 +1,6 @@
 <?php
 require_once "vendor/connect.php";
-require_once "class/Date.php"
+require_once "class/Date.php";
 ?>
 
 <!doctype html>
@@ -21,23 +21,23 @@ require_once "class/Date.php"
         <th>Действие</th>
     </tr>
     <?php
-    $idMaster = $_GET['master_id'];
+    $masterId = $_GET['master_id'];
     /** @var $pdo */
     $dates = new Date($pdo);
-    $getDate = $dates->getDates($idMaster);
+    $getDate = $dates->getDates($masterId);
     foreach ($getDate as $date) {
         ?>
         <tr>
             <td><?= $date['date'] ?></td>
             <td><?= $date['time'] ?></td>
-            <td><a class="btn-book" href="vendor/deleteDate.php?date_id=<?= $date['id'] ?>&master_id=<?= $idMaster ?>">Отменить запись</a></td>
+            <td><a class="btn-book" href="vendor/deleteDate.php?date_id=<?= $date['id'] ?>&master_id=<?= $masterId ?>">Отменить запись</a></td>
         </tr>
         <?php
     }
     ?>
 </table>
 <br>
-<form action="vendor/createDate.php?master_id=<?= $idMaster ?>" method="post">
+<form action="vendor/createDate.php?master_id=<?= $masterId ?>" method="post">
     <label>Выбор даты</label>
     <input type="date" name="date">
     <label>Выбор времени</label>

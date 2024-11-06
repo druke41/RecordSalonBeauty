@@ -1,6 +1,6 @@
 <?php
 
-class Masters
+class Master
 {
     public PDO $pdo;
 
@@ -8,13 +8,16 @@ class Masters
     {
         $this->pdo = $pdo;
     }
+
     public function getMasters(): Array
     {
         $sql = "SELECT * FROM masters";
         $result = $this->pdo->prepare($sql);
         $result->execute();
+
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
+
     public function createMaster(string $masterName, string $masterSpecialization): Void
     {
         $sql = "INSERT INTO `masters` (`id`, `name`, `spec`) VALUES (NULL, '$masterName', '$masterSpecialization')";

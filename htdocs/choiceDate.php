@@ -22,16 +22,16 @@ require_once "class/Date.php";
         <th>Действие</th>
     </tr>
     <?php
-    $master_id = $_GET["master_id"];
+    $masterId = $_GET["master_id"];
     /** @var $pdo */
     $addDate = new date($pdo);
-    $dates = $addDate ->getDates($master_id);
+    $dates = $addDate->getDates($masterId);
     foreach ($dates as $date) {
         ?>
         <tr>
             <td><?= $date['date']?></td>
             <td><?= $date['time'] ?></td>
-            <td><a class="btn-book" href="vendor/recording.php?master_id=<?=$master_id?>&date_id=<?=$date['id']?>">Записаться</a></td>
+            <td><a class="btn-book" href="vendor/recording.php?master_id=<?=$masterId?>&date_id=<?=$date['id']?>">Записаться</a></td>
         </tr>
         <?php
     }
