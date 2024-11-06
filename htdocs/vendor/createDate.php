@@ -7,7 +7,7 @@ $time = $_POST["time"];
 $masterId = $_GET["master_id"];
 
 /** @var $pdo */
-$createObj = new date($pdo);
+$createObj = new Date($pdo);
 $createDate = $createObj -> createDate($date, $time, $masterId);
 header('Location: ../updateDate.php?master_id='.$masterId);
 exit();
